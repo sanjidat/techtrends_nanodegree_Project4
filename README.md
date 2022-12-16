@@ -48,4 +48,4 @@ docker tag techtrends gohin/project4_techtrend:v1.0.0
 docker push gohin/project4_techtrend:v1.0.0
 
 # Step 3: Continuous Integration with GitHub Actions
-Run the Docker build and push successfully from GitHub Action.
+Run the "techtrends-dockerhub.yml" successfully from Workflow directory using GitHub Action.
