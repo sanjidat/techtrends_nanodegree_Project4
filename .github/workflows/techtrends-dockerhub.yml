@@ -36,4 +36,4 @@ jobs:
           file: ./techtrends/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: gohin/techtrends:latest
+          tags: gohin/project4_techtrend:latest
