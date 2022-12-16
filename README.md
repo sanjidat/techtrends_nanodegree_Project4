@@ -27,7 +27,9 @@ Throughout this step, you should apply some of the learned best development prac
 
 <h3>Healthcheck endpoint</h3>
 @app.route('/healthz')
+
 def healthz():
+
   response = app.response_class(
           response=json.dumps({"result":"OK - healthy"}),
           status=200,
