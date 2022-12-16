@@ -10,6 +10,7 @@ To run this application follow these steps:
 1. Initialize the database by using the python init_db.py command. This creates or overwrites (if the file already exists) the database.db file that is used to store and access the available posts.
 2. Run the TechTrends application by using the python app.py command. The application is running on port 3111 and you can access it by querying the http://127.0.0.1:3111/ endpoint.
 
+# Dependencies
 Make sure you have the following dependencies installed:
 1. Install Python using the official Python document https://www.python.org/downloads/
 2. Install Git using the using the instruction provided in the document https://git-scm.com/downloads
