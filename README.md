@@ -24,49 +24,12 @@ Throughout this step, you should apply some of the learned best development prac
 1. Check the Python installation and clone the https://github.com/sanjidat/techtrends_nanodegree_Project4.git repository
 2. python3 --version  (To Check the Python version installed)
 3. cd techtrends_nanodegree_Project4/techtrends/
-
+4. run "python app.py"
 <h3>Healthcheck endpoint</h3>
-@app.route('/healthz')
-
-def healthz():
-
-  response = app.response_class(
-  
-          response=json.dumps({"result":"OK - healthy"}),
-          
-          status=200,
-          
-          mimetype='application/json'
-          
-  )
-  
-  return response
+Navigate to http://127.0.0.1:3111/healthz in the browser and look for the output "result: OK - healthy"
 <h3>Metrics endpoint</h3>
-@app.route('/metrics')
-
-def metrics():
-
-  connection = get_db_connection()
-  
-  number_of_posts = connection.execute('SELECT * FROM number_of_posts').fetchall
-  
-  connection.close()  
-  
-  response = app.response_class(
-  
-          response=json.dumps({"status":"success","code":0,"data":{"UserCount":140,"UserCountActive":23}}),
-          
-          status=200,
-          
-          mimetype='application/json'
-          
-  )
-  
-  return response
+Navigate to http://127.0.0.1:3111/metrics in the browser and look for the output "{"db_connection_count": 1, "post_count": 7}"
 <h3>Logs</h3>
-if __name__ == "__main__":
+Check for the log output.
 
-   logging.basicConfig(filename='app.log',level=logging.DEBUG, handlers=[logging.StreamHandler(sys.stdout), logging.StreamHandler(sys.stderr)])
-   
-   app.run(host='0.0.0.0', port='3111')
-
+# Docker for Application Packaging
