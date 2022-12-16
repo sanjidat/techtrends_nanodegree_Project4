@@ -18,7 +18,23 @@ Make sure you have the following dependencies installed:
 4. Install Vagrant using the using the instruction provided in the document https://www.vagrantup.com/downloads
 5. Install VirtualBox using the using the instruction provided in the document https://www.virtualbox.org/wiki/Downloads. Ensure that you have VirtualBox 6.1.16 or higher installed.
 
-<h3>Step 1: Best Practices For Application Deployment</h3>
+# Step 1: Best Practices For Application Deployment
+Throughout this step, you should apply some of the learned best development practices to the TechTrends project. As a result, you will add the metrics and health check endpoints, in addition to the logging functionality.
+
 1. Check the Python installation and clone the https://github.com/sanjidat/techtrends_nanodegree_Project4.git repository
-2. python3 --version  # Check the Python version installed
+2. python3 --version  (To Check the Python version installed)
+3. cd techtrends_nanodegree_Project4/techtrends/
+
+<h3>Healthcheck endpoint</h3>
+
+
+
+
+
+
+<h3>Metrics endpoint</h3>
+
+
+<h3>Logs</h3>
+
 
