@@ -33,3 +33,17 @@ Navigate to http://127.0.0.1:3111/metrics in the browser and look for the output
 Check for the log output.
 
 # Docker for Application Packaging
+For Docker,
+## Docker Login
+docker login
+## Docker commands used to build the application 
+docker build -t techtrends .
+## Docker commands used to run the application
+docker run -d -p 7111:3111 techtrends
+## Docker commands used to get the application logs
+docker logs ff7dc67311ab54e085148d062a8b953d99aa2b973defc19b9ad9edc311991d16
+## Docker command to tag the image
+docker tag techtrends gohin/project4_techtrend:v1.0.0
+## Docker command to push to Docker Repo
+docker push gohin/project4_techtrend:v1.0.0
+
