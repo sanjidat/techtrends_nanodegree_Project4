@@ -39,21 +39,34 @@ def healthz():
           mimetype='application/json'
           
   )
+  
   return response
 <h3>Metrics endpoint</h3>
 @app.route('/metrics')
+
 def metrics():
+
   connection = get_db_connection()
+  
   number_of_posts = connection.execute('SELECT * FROM number_of_posts').fetchall
+  
   connection.close()  
+  
   response = app.response_class(
+  
           response=json.dumps({"status":"success","code":0,"data":{"UserCount":140,"UserCountActive":23}}),
+          
           status=200,
+          
           mimetype='application/json'
+          
   )
+  
   return response
 <h3>Logs</h3>
 if __name__ == "__main__":
+
    logging.basicConfig(filename='app.log',level=logging.DEBUG, handlers=[logging.StreamHandler(sys.stdout), logging.StreamHandler(sys.stderr)])
+   
    app.run(host='0.0.0.0', port='3111')
 
