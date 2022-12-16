@@ -14,10 +14,9 @@ docker login
 docker build -t techtrends .
 docker images
 docker run -d -p 7111:3111 techtrends
-e517ac8da827b9e78d89d27ebeeed353cdd0ebd5869c98e037e23289e4aff1de
+7f64e800358935d83496580f9a9e59b00f9aee586748011c270751445e6e22f3
 docker ps
-docker logs e517ac8da827b9e78d89d27ebeeed353cdd0ebd5869c98e037e23289e4aff1de
-
+docker logs 7f64e800358935d83496580f9a9e59b00f9aee586748011c270751445e6e22f3
 
 * Serving Flask app 'app' (lazy loading)
  * Environment: production
@@ -28,55 +27,35 @@ WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 WARNING:werkzeug: * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
-INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)  
 INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:53:21] "GET / HTTP/1.1" 200 -  
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:53:21] "GET / HTTP/1.1" 200 -  
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:53:22] "GET /static/css/main.css HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:53:22] "GET /static/css/main.css HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:53:23] "GET /favicon.ico HTTP/1.1" 404 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:53:23] "GET /favicon.ico HTTP/1.1" 404 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:29] "GET / HTTP/1.1" 200 -  
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:29] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:29] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:29] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:31] "GET /1 HTTP/1.1" 200 - 
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:31] "GET /1 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:31] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:31] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:33] "GET / HTTP/1.1" 200 -  
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:33] "GET / HTTP/1.1" 200 -  
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:33] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:33] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:34] "GET /2 HTTP/1.1" 200 - 
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:34] "GET /2 HTTP/1.1" 200 - 
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:34] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:34] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:35] "GET / HTTP/1.1" 200 -  
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:35] "GET / HTTP/1.1" 200 -  
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:35] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:35] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:36] "GET /create HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:36] "GET /create HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:36] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:36] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:57] "POST /create HTTP/1.1" 
-302 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:57] "POST /create HTTP/1.1" 
-302 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:57] "GET / HTTP/1.1" 200 -  
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:57] "GET / HTTP/1.1" 200 -  
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:57] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:54:57] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:55:06] "GET /metrics HTTP/1.1" 
-200 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:55:06] "GET /metrics HTTP/1.1" 
-200 -
-DEBUG:app:Wed Dec 14 15:55:16 2022, Test Debug Message
-DEBUG:app:Wed Dec 14 15:55:16 2022, Test Debug Message
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:55:16] "GET /healthz HTTP/1.1" 
-200 -
-INFO:werkzeug:172.17.0.1 - - [14/Dec/2022 15:55:16] "GET /healthz HTTP/1.1" 
-200 -
+INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:17:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:17:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:17:21] "GET /static/css/main.css HTTP/1.1" 200 -      
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:17:21] "GET /static/css/main.css HTTP/1.1" 200 -      
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:17:21] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:17:21] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:19:54] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:19:54] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:19:56] "GET /static/css/main.css HTTP/1.1" 304 -      
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:19:56] "GET /static/css/main.css HTTP/1.1" 304 -      
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:20:10] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:20:10] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:20:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:20:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:20:10] "GET /static/css/main.css HTTP/1.1" 304 -      
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:20:10] "GET /static/css/main.css HTTP/1.1" 304 -      
+DEBUG:app:Fri Dec 16 11:20:18 2022, Test Debug Message
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:20:18] "GET /healthz HTTP/1.1" 200 -
+DEBUG:app:Fri Dec 16 11:20:18 2022, Test Debug Message
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:20:18] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:20:57] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:20:57] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:21:40] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:21:40] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:21:42] "GET /static/css/main.css HTTP/1.1" 304 -      
+INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 11:21:42] "GET /static/css/main.css HTTP/1.1" 304 - 
+
+
 
 

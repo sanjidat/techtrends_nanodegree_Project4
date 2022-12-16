@@ -1,23 +1,24 @@
 import sqlite3
-import logging
-import sys
 import time
+import sys
+import logging
+
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 
-connection_count = 0
-
-def logger_message(message):
-    date = time.asctime()
-    return f"{date}, {message}"
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
+number_of_connection = 0
 def get_db_connection():
     connection = sqlite3.connect('database.db')
     connection.row_factory = sqlite3.Row
-    global connection_count
-    connection_count += 1
+    global number_of_connection
+    number_of_connection +=1
     return connection
+
+def logmsg(msg):
+    date = time.asctime
+    return f"{date}, {msg}"
 
 # Function to get a post using its ID
 def get_post(post_id):
@@ -32,26 +33,26 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your secret key'
 
 @app.route('/healthz')
-def shealthz():
+def healthcheck():
     response = app.response_class(
             response=json.dumps({"result":"OK - healthy"}),
             status=200,
             mimetype='application/json'
     )
-    app.logger.debug(logger_message("Test Debug Message"))
+    ## log line
+    app.logger.debug('Debug Message')
     return response
-
 @app.route('/metrics')
 def metrics():
     connection = get_db_connection()
     posts = connection.execute('SELECT * FROM posts').fetchall()
-    connection.close()
     response = app.response_class(
-            response=json.dumps({"db_connection_count": connection_count, "post_count": len(posts)}),
+            response=json.dumps({"db_connection_count": number_of_connection, "post_count": len(posts)}),
             status=200,
             mimetype='application/json'
     )
-
+    ## log line
+    app.logger.info('Metrics request successfull')
     return response
 
 # Define the main route of the web application 
@@ -99,11 +100,5 @@ def create():
 
 # start the application on port 3111
 if __name__ == "__main__":
-    logging.basicConfig(
-    level = logging.DEBUG,
-    handlers=[
-        logging.StreamHandler(sys.stdout),
-        logging.StreamHandler(sys.stderr)
-    ]
-    )
-    app.run(host='0.0.0.0', port='3111')
+   logging.basicConfig(level=logging.DEBUG,handlers=[logging.StreamHandler(sys.stdout), logging.StreamHandler(sys.stderr)])
+   app.run(host='0.0.0.0', port='3111')
