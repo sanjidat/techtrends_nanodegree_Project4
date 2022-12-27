@@ -1,60 +1,87 @@
+## Docker commands used to login
+docker login
+
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build -t techtrends .
+
+## List the available Docker Image
+docker images
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
+
+46978c34a637695d78ac36633bbf683de2984592cc0f4bd01a2aa2bdf8d9aac5
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker logs 46978c34a637695d78ac36633bbf683de2984592cc0f4bd01a2aa2bdf8d9aac5
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
-
-docker login
-docker build -t techtrends .
-docker images
-docker run -d -p 7111:3111 techtrends
-ff7dc67311ab54e085148d062a8b953d99aa2b973defc19b9ad9edc311991d16
-docker ps
-docker logs ff7dc67311ab54e085148d062a8b953d99aa2b973defc19b9ad9edc311991d16
-
 * Serving Flask app 'app' (lazy loading)
  * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.  
+   WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
  * Debug mode: off
 WARNING:werkzeug: * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.  
+   WARNING: This is a development server. Do not use it in a production deployment.
 WARNING:werkzeug: * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.  
+   WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
 INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:46] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:46] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:46] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:46] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:46] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:46] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:46] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:46] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:51] "GET /create HTTP/1.1" 200 -     
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:51] "GET /create HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:51] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:51] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:58] "POST /create HTTP/1.1" 302 -    
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:58] "POST /create HTTP/1.1" 302 -    
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:58] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:58] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:58] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:47:58] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:13:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:13:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:13:36] "GET /static/css/main.css HTTP/1.1" 304 -   
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:13:36] "GET /static/css/main.css HTTP/1.1" 304 -   
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:13:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:13:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:13:38] "GET /static/css/main.css HTTP/1.1" 304 -   
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:13:38] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:13:39] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:13:39] "GET /favicon.ico HTTP/1.1" 404 -
+DEBUG:app:Metrics request successfull
+DEBUG:app:Metrics request successfull
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:13:56] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:13:56] "GET /metrics HTTP/1.1" 200 -
 DEBUG:app:Debug Message
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:05] "GET /healthz HTTP/1.1" 200 -
 DEBUG:app:Debug Message
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:48:03] "GET /healthz HTTP/1.1" 200 -    
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:48:03] "GET /healthz HTTP/1.1" 200 -    
-INFO:app:Metrics request successfull
-INFO:app:Metrics request successfull
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:48:14] "GET /metrics HTTP/1.1" 200 -    
-INFO:werkzeug:172.17.0.1 - - [16/Dec/2022 12:48:14] "GET /metrics HTTP/1.1" 200 -   
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:05] "GET /healthz HTTP/1.1" 200 -
+DEBUG:app:<built-in function asctime>, Post "2020 CNCF Annual Report" was retrieved.
+DEBUG:app:<built-in function asctime>, Post "2020 CNCF Annual Report" was retrieved.
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:09] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:09] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:09] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:09] "GET /static/css/main.css HTTP/1.1" 304 -   
+DEBUG:app:<built-in function asctime>, Post "KubeCon + CloudNativeCon 2021" was retrieved.
+DEBUG:app:<built-in function asctime>, Post "KubeCon + CloudNativeCon 2021" was retrieved.      
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:11] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:11] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:11] "GET /static/css/main.css HTTP/1.1" 304 -   
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:11] "GET /static/css/main.css HTTP/1.1" 304 -   
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:17] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:17] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:18] "GET /static/css/main.css HTTP/1.1" 304 -   
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:18] "GET /static/css/main.css HTTP/1.1" 304 -   
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:33] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:33] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:33] "GET /static/css/main.css HTTP/1.1" 304 -   
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:33] "GET /static/css/main.css HTTP/1.1" 304 -   
+DEBUG:app:<built-in function asctime>, Post "NewPost" was retrieved.
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:35] "GET /7 HTTP/1.1" 200 -
+DEBUG:app:<built-in function asctime>, Post "NewPost" was retrieved.
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:35] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:36] "GET /static/css/main.css HTTP/1.1" 304 -   
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:36] "GET /static/css/main.css HTTP/1.1" 304 -   
+DEBUG:app:<built-in function asctime>, 'About Us' page is retrieved.
+DEBUG:app:<built-in function asctime>, 'About Us' page is retrieved.
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:39] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:39] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:40] "GET /static/css/main.css HTTP/1.1" 304 -   
+INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:40] "GET /static/css/main.css HTTP/1.1" 304 -   
+
+
+
 
 # Docker command to tag the image
 docker tag techtrends gohin/project4_techtrend:v1.0.0
