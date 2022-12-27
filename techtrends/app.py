@@ -52,7 +52,7 @@ def metrics():
             mimetype='application/json'
     )
     ## log line
-    app.logger.info('Metrics request successfull')
+    app.logger.debug('Metrics request successfull')
     return response
 
 # Define the main route of the web application 
