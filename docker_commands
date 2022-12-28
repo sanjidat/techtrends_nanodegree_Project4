@@ -80,11 +80,8 @@ INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:39] "GET /about HTTP/1.1" 200 -
 INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:40] "GET /static/css/main.css HTTP/1.1" 304 -   
 INFO:werkzeug:172.17.0.1 - - [27/Dec/2022 10:14:40] "GET /static/css/main.css HTTP/1.1" 304 -   
 
-
-
-
 # Docker command to tag the image
-docker tag techtrends gohin/project4_techtrend:v1.0.0
+docker tag techtrends gohin/techtrends_1:v1.0.0
 
 # Docker command to push to docker repo
-docker push gohin/project4_techtrend:v1.0.0
+docker push gohin/techtrends_1:v1.0.0

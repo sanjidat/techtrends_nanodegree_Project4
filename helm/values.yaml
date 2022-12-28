@@ -6,9 +6,11 @@ service:
   protocol: TCP
   type: ClusterIP
 image:
-  repository: gohin/techtrends 
+  repository: gohin/techtrends_1 
   tag: latest
   pullPolicy: IfNotPresent
+
+replicaCount: 1
 
 resources: 
   requests: 
@@ -18,8 +20,6 @@ resources:
     memory: 128Mi
     CPU: 500m
 
-replicaCount: 1
-
 containerPort: 3111
 livenessProbe:
     path: /healthz
@@ -27,3 +27,6 @@ livenessProbe:
 readinessProbe:
     path: /healthz
     port: 3111
+
+
+    
